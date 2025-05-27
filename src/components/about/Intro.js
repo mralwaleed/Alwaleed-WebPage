@@ -102,12 +102,6 @@ const Intro = () => {
                 </span>
                 <span>Problem Solving, Fast Learning, Leadership, Teamwork</span>
               </li>
-              <li className="m-0">
-                <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Freelance:
-                </span>
-                <span>Available</span>
-              </li>
             </ul>
           </div>
         </div>
