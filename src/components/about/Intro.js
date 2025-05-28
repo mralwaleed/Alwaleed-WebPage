@@ -1,5 +1,26 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+
 const Intro = () => {
+  const handleDownloadCV = () => {
+    // Create a direct download link to the file in the public folder
+    const fileUrl = '/Alwaleed_CV.pdf';
+    
+    // Create an anchor element
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'Alwaleed_Albader_CV.pdf';
+    link.target = '_blank';
+    
+    // Trigger the download
+    document.body.appendChild(link);
+    link.click();
+    
+    // Clean up
+    setTimeout(() => {
+      document.body.removeChild(link);
+    }, 100);
+  };
+
   return (
     <Fragment>
 
@@ -94,22 +115,19 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Degree:
                 </span>
-                <span>Bachelor’s Degree in Computer Science</span>
-              </li>
-              <li className="m-0">
-                <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Interest:
-                </span>
-                <span>Problem Solving, Fast Learning, Leadership, Teamwork</span>
+                <span>Bachelor's Degree in Computer Science</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div className="tokyo_tm_button" data-position="left">
-        <a href="assets/img/cv/1.jpg" download>
+        <button 
+          onClick={handleDownloadCV}
+          style={{ cursor: 'pointer', border: 'none' }}
+        >
           <span>Download CV</span>
-        </a>
+        </button>
       </div>
     </Fragment>
   );
