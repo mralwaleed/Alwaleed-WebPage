@@ -1,4 +1,4 @@
-import { createContext, useCallback, useReducer } from "react";
+import { createContext, useCallback, useReducer, useEffect } from "react";
 
 // Create Context
 const TokyoContext = createContext();
@@ -11,6 +11,7 @@ const type = {
   SERVICEMODAL: "SERVICEMODAL",
   NEWSMODAL: "NEWSMODAL",
   PORTFOLIODETAILSMODAL: "PORTFOLIODETAILSMODAL",
+  DARKMODE: "DARKMODE",
 };
 const {
   NAV,
@@ -19,6 +20,7 @@ const {
   SERVICEMODAL,
   NEWSMODAL,
   PORTFOLIODETAILSMODAL,
+  DARKMODE,
 } = type;
 
 // Initial Value
@@ -29,6 +31,7 @@ const initialState = {
   serviceModal: null,
   newsModal: null,
   portfolioDetailsModal: null,
+  darkMode: true,
   menus: [
     { id: 1, name: "Home", href: "home" },
     { id: 2, name: "about", href: "about" },
@@ -72,6 +75,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         portfolioDetailsModal: payload,
+      };
+    case DARKMODE:
+      return {
+        ...state,
+        darkMode: payload,
       };
     default:
       return state;
@@ -122,6 +130,45 @@ const TokyoState = ({ children }) => {
     });
   }, []);
 
+  const toggleDarkMode = useCallback(() => {
+    const newDarkMode = !state.darkMode;
+    dispatch({
+      type: DARKMODE,
+      payload: newDarkMode,
+    });
+    
+    // Apply or remove dark class from body
+    if (newDarkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+    
+    // Save to localStorage
+    localStorage.setItem('darkMode', JSON.stringify(newDarkMode));
+  }, [state.darkMode]);
+
+  // Initialize dark mode from localStorage on component mount
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode !== null) {
+      const isDarkMode = JSON.parse(savedDarkMode);
+      dispatch({
+        type: DARKMODE,
+        payload: isDarkMode,
+      });
+      
+      if (isDarkMode) {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    } else {
+      // Apply dark mode by default if no preference is saved
+      document.body.classList.add('dark');
+    }
+  }, []);
+
   const {
     nav,
     animation,
@@ -129,6 +176,7 @@ const TokyoState = ({ children }) => {
     serviceModal,
     newsModal,
     portfolioDetailsModal,
+    darkMode,
     menus,
   } = state;
   return (
@@ -147,6 +195,8 @@ const TokyoState = ({ children }) => {
         setNewsModal,
         portfolioDetailsModal,
         setPortfolioDetailsModal,
+        darkMode,
+        toggleDarkMode,
       }}
     >
       {children}

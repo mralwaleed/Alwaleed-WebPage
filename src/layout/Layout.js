@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     tokyo.imageToSvg();
     tokyo.customCursor();
   }, []);
-  const { modal, serviceModal, newsModal, portfolioDetailsModal } =
+  const { modal, serviceModal, newsModal, portfolioDetailsModal, darkMode } =
     useContext(TokyoContext);
   return (
     <Fragment>
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
         <Sidebar />
         {/* /LEFTPART */}
         {/* RIGHTPART */}
-        <div className="rightpart w-full min-h-[100vh] float-left relative bg-[#f8f8f8] pl-[450px]">
+        <div className={`rightpart w-full min-h-[100vh] float-left relative ${darkMode ? 'bg-[#1d1d1d]' : 'bg-[#f8f8f8]'} pl-[450px]`}>
           <div className="rightpart_in relative w-full float-left clear-both border-solid border-[#ebebeb] border-l min-h-[100vh]">
             {children}
           </div>
