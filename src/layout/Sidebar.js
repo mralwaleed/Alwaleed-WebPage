@@ -16,7 +16,7 @@ const Sidebar = () => {
               alt="image"
             />
             <h3 className="font-poppins font-black text-[31px] tracking-[5px]">
-              TOKYO
+              ALWALEED
             </h3>
           </a>
         </div>
@@ -77,16 +77,9 @@ const Sidebar = () => {
         
         <div className="copyright w-full float-left">
           <p className="text-[15px] text-[#999] font-montserrat leading-[25px]">
-            © {new Date().getFullYear()} Tokyo
+            © {new Date().getFullYear()} Alwaleed Albader
             <br />
-            Created by{" "}
-            <a
-              className="text-[#787878] font-medium transition-all duration-300 hover:text-black"
-              href="https://themeforest.net/user/Codeefly"
-              target="_blank"
-            >
-              Codeefly
-            </a>
+            Senior Software Engineer
           </p>
         </div>
       </div>

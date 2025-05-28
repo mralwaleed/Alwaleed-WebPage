@@ -18,7 +18,7 @@ const Mobile = () => {
                 alt="image"
               />
               <h3 className="font-black font-poppins text-[25px] tracking-[4px]">
-                TOKYO
+                ALWALEED
               </h3>
             </a>
           </div>
