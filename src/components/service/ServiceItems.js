@@ -4,61 +4,61 @@ import { useContext } from "react";
 const services = [
   {
     id: 1,
-    name: "Web Design",
+    name: "Domain Registry Systems",
     text: [
-      "Alwaleed Albader is a leading web design professional with expertise in creating innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business.",
-      "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
-      "That's why more companies are not only reevaluating their website's design but also partnering with skilled developers like Alwaleed, who has driven successful results for his clients. With technical expertise and attention to detail, I can design a custom website that drives results for your business.",
+      "Expert in building and upgrading secure, high-performance domain registry platforms, ensuring regulatory compliance and seamless integration with registry APIs.",
+      "Led modernization projects for national domain name systems, driving business growth and service expansion.",
+      "Collaborated with cross-functional teams and external stakeholders to deliver robust domain solutions."
     ],
     image: "assets/img/news/1.jpg",
   },
   {
     id: 2,
-    name: "Content Writing",
+    name: "Scalable Payment Gateways",
     text: [
-      "Alwaleed Albader is a leading web design professional with expertise in creating innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business.",
-      "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
-      "That's why more companies are not only reevaluating their website's design but also partnering with skilled developers like Alwaleed, who has driven successful results for his clients. With technical expertise and attention to detail, I can design a custom website that drives results for your business.",
+      "Designed and managed scalable payment gateway solutions, integrating providers like Checkout and HyperPay for secure, efficient transactions.",
+      "Implemented background jobs and message queues (Hangfire, RabbitMQ) to enhance reliability and performance.",
+      "Supported major government and enterprise products with seamless payment integration."
     ],
     image: "assets/img/news/2.jpg",
   },
   {
     id: 3,
-    name: "Brand Identity",
+    name: "System Architecture & Microservices",
     text: [
-      "Alwaleed Albader is a leading web design professional with expertise in creating innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business.",
-      "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
-      "That's why more companies are not only reevaluating their website's design but also partnering with skilled developers like Alwaleed, who has driven successful results for his clients. With technical expertise and attention to detail, I can design a custom website that drives results for your business.",
+      "Architected and deployed microservices-based systems using .NET Core, Nginx, and modern DevOps practices.",
+      "Ensured scalability, maintainability, and clean architecture across large-scale platforms.",
+      "Applied best practices in clean code, modular design, and continuous integration."
     ],
     image: "assets/img/news/3.jpg",
   },
   {
     id: 4,
-    name: "Live Chat",
+    name: "API Integration & Automation",
     text: [
-      "Alwaleed Albader is a leading web design professional with expertise in creating innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business.",
-      "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
-      "That's why more companies are not only reevaluating their website's design but also partnering with skilled developers like Alwaleed, who has driven successful results for his clients. With technical expertise and attention to detail, I can design a custom website that drives results for your business.",
+      "Integrated complex APIs for registry, payment, and business services, enabling automation and interoperability.",
+      "Developed robust background processing and job scheduling for mission-critical workflows.",
+      "Enhanced system reliability and compliance through automated monitoring and alerting."
     ],
     image: "assets/img/news/4.jpg",
   },
   {
     id: 5,
-    name: "After Effects",
+    name: "Technical Leadership & Agile Delivery",
     text: [
-      "Alwaleed Albader is a leading web design professional with expertise in creating innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business.",
-      "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
-      "That's why more companies are not only reevaluating their website's design but also partnering with skilled developers like Alwaleed, who has driven successful results for his clients. With technical expertise and attention to detail, I can design a custom website that drives results for your business.",
+      "Led cross-functional teams as a technical lead and project manager, delivering projects on time and within scope.",
+      "Applied agile methodologies to optimize collaboration, communication, and delivery outcomes.",
+      "Mentored engineers and fostered a culture of continuous learning and innovation."
     ],
     image: "assets/img/news/1.jpg",
   },
   {
     id: 6,
-    name: "Mobile App",
+    name: "Business Development & Client Success",
     text: [
-      "Alwaleed Albader is a leading web design professional with expertise in creating innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business.",
-      "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
-      "That's why more companies are not only reevaluating their website's design but also partnering with skilled developers like Alwaleed, who has driven successful results for his clients. With technical expertise and attention to detail, I can design a custom website that drives results for your business.",
+      "Spearheaded business development for domain and payment services, identifying key partnerships and expanding offerings.",
+      "Delivered technical demos, onboarded clients, and ensured high customer satisfaction.",
+      "Bridged the gap between technical and business teams to drive value and growth."
     ],
     image: "assets/img/news/2.jpg",
   },

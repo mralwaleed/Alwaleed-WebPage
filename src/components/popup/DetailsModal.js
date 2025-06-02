@@ -19,7 +19,7 @@ const DetailsModal = () => {
         </div>
         <div className="portfolio_main_title">
           <h3>{portfolioDetailsModal.title}</h3>
-          <span>{portfolioDetailsModal.category}</span>
+          <span>{portfolioDetailsModal.category === 'Detail' ? 'Achievement' : portfolioDetailsModal.category}</span>
           <div />
         </div>
         <div className="main_details w-full h-auto clear-both flex mb-[90px]">

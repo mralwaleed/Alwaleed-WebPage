@@ -78,7 +78,7 @@ const detailData = [
     images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
   },
 ];
-const Portfolio = () => {
+const Achievements = () => {
   const isotope = useRef();
   const [filterKey, setFilterKey] = useState("*");
   useEffect(() => {
@@ -107,14 +107,14 @@ const Portfolio = () => {
   });
   const { setPortfolioDetailsModal, modalToggle } = useContext(TokyoContext);
   return (
-    <SectionContainer name={"portfolio"}>
+    <SectionContainer name={"achievements"}>
       <div className="container">
         <div className="tokyo_tm_portfolio w-full h-auto clear-both float-left px-0 pt-[100px] pb-[40px]">
           <div className="tokyo_tm_title w-full h-auto clear-both float-left mb-[62px]">
             <div className="title_flex w-full h-auto clear-both flex justify-between items-end">
               <SectionTitle
-                pageName={"Portfolio"}
-                title={"Creative Portfolio"}
+                pageName={"Achievements"}
+                title={"Achievements"}
               />
               <div className="portfolio_filter">
                 <ul className="list-none">
@@ -334,4 +334,4 @@ const Portfolio = () => {
     </SectionContainer>
   );
 };
-export default Portfolio;
+export default Achievements;
