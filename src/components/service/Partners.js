@@ -1,15 +1,14 @@
 const techStack = [
-  { id: 1,  image: "/assets/img/tech/dotnet.png" },
-  { id: 2,  image: "../assets/img/tech/dotnet.svg" },
-  { id: 3,  image: "assets/img/tech/dotnet.png" },
-  { id: 4, name: "Spring Boot", image: "assets/img/tech/dotnet.png" },
-  { id: 5, name: "Flask", image: "assets/img/tech/flask.png" },
-  { id: 6, name: "SQL Server", image: "assets/img/tech/sqlserver.png" },
-  { id: 7, name: "PostgreSQL", image: "assets/img/tech/postgresql.png" },
-  { id: 8, name: "Git", image: "assets/img/tech/git.png" },
-  { id: 9, name: "Nginx", image: "assets/img/tech/nginx.png" },
-  { id: 10, name: "Hangfire", image: "assets/img/tech/hangfire.png" },
-  { id: 11, name: "RabbitMQ", image: "assets/img/tech/rabbitmq.png" },
+  { id: 1, name: ".NET", image: "assets/img/tech/dotnet.png" },
+  { id: 2, name: "Laravel", image: "assets/img/tech/laravel.png" },
+  { id: 3, name: "Angular", image: "assets/img/tech/angular.png" },
+  { id: 4, name: "SQL Server", image: "assets/img/tech/sqlserver.png" },
+  { id: 5, name: "PostgreSQL", image: "assets/img/tech/postgresql.png" },
+  { id: 6, name: "Git", image: "assets/img/tech/git.png" },
+  { id: 7, name: "Nginx", image: "assets/img/tech/nginx.png" },
+  { id: 8, name: "RabbitMQ", image: "assets/img/tech/rabbitmq.svg" },
+  { id: 9, name: "Red Hat", image: "assets/img/tech/redhat.svg" },
+  { id: 10, name: "Ubuntu", image: "assets/img/tech/ubuntu.svg" },
 ];
 
 const TechnologiesTools = () => {
@@ -24,15 +23,14 @@ const TechnologiesTools = () => {
             {techStack.map((tech) => (
               <li
                 key={tech.id}
-                className="m-0 float-left w-1/4 border-solid border-[#eee] border-2 text-center h-[145px] leading-[145px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                className="m-0 float-left w-1/4 border-solid border-[#eee] border-2 text-center h-[145px] relative mt-[-2px] ml-[-2px] overflow-hidden transition-all duration-300 hover:border-[#ff6b6b] hover:shadow-lg cursor-pointer group hover:bg-[#ff6b6b]"
               >
-                <div className="list_inner w-full h-full clear-both float-left opacity-80 transition-all duration-300 hover:opacity-100 flex flex-col items-center justify-center">
+                <div className="list_inner w-full h-full clear-both float-left transition-all duration-300 flex items-center justify-center relative">
                   <img
-                    className="max-w-[50%] max-h-[70px] inline-block mb-2"
+                    className="max-w-[50%] max-h-[70px] inline-block transition-all duration-300 opacity-70 group-hover:opacity-100 group-hover:filter group-hover:brightness-0 group-hover:invert"
                     src={tech.image}
                     alt={tech.name}
                   />
-                  <span className="block text-[15px] font-semibold text-black">{tech.name}</span>
                 </div>
               </li>
             ))}
